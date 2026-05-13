@@ -30,19 +30,19 @@
         }
 
         header {
-            height: 60vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
-                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000');
-            background-size: cover;
-            background-position: center;
-            border-bottom: 3px solid var(--accent);
-            padding: 20px;
-        }
+    min-height: 50vh; /* Минимальная высота вместо фиксированной */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
+                url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 3px solid var(--accent);
+    padding: 60px 20px; /* Увеличили отступы сверху и снизу */
+}
 
         header h1 {
             font-size: 3rem;
@@ -52,10 +52,10 @@
         }
 
         .container {
-            max-width: 900px;
-            margin: -50px auto 50px;
-            padding: 0 20px;
-        }
+    max-width: 900px;
+    margin: 20px auto 50px; /* Изменили -50px на 20px, чтобы не было нахлеста */
+    padding: 0 20px;
+}
 
         .section {
             background: var(--card-bg);
