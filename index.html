@@ -13,7 +13,6 @@
             --text-main: #f1f5f9;
             --text-dim: #94a3b8;
             --danger: #ef4444;
-            --success: #10b981;
         }
 
         body {
@@ -74,6 +73,7 @@
             align-items: center;
             gap: 15px;
             margin-top: 0;
+            font-size: 1.8rem;
         }
 
         .rule-card {
@@ -86,7 +86,7 @@
         }
 
         .rule-card:hover {
-            transform: scale(1.02);
+            transform: scale(1.01);
             border: 1px solid var(--accent);
         }
 
@@ -98,7 +98,7 @@
             color: var(--accent);
         }
 
-        /* Стиль для экстренного раздела */
+        /* Экстренный раздел */
         .emergency-section {
             border: 1px solid rgba(239, 68, 68, 0.3);
             background: linear-gradient(145deg, #1e293b, #2d1616);
@@ -109,8 +109,7 @@
         }
 
         .emergency-card {
-            background: rgba(239, 68, 68, 0.05);
-            border-left: 4px solid var(--danger);
+            border-left-color: var(--danger);
         }
 
         .warning-banner {
@@ -124,19 +123,19 @@
 
         footer {
             text-align: center;
-            padding: 40px;
+            padding: 60px 20px;
             color: var(--text-dim);
             font-size: 0.9rem;
-            border-top: 1px solid rgba(255,255,255,0.05);
+            background: rgba(0,0,0,0.2);
         }
 
         .section:nth-child(2) { animation-delay: 0.2s; }
         .section:nth-child(3) { animation-delay: 0.4s; }
-        .section:nth-child(4) { animation-delay: 0.6s; }
 
         @media (max-width: 600px) {
             header h1 { font-size: 1.8rem; }
-            .section { padding: 20px; }
+            .section { padding: 25px; }
+            h2 { font-size: 1.4rem; }
         }
     </style>
 </head>
@@ -144,31 +143,10 @@
 
 <header>
     <h1>Фишинг: как защитить себя в 2026 году</h1>
-    <p style="font-size: 1.1rem; max-width: 650px; color: var(--text-dim);">Результаты исследовательского проекта учащегося 10 "Д" класса</p>
+    <p style="font-size: 1.1rem; max-width: 650px; color: var(--text-dim);">Просветительский ресурс по противодействию высокотехнологичному фишингу</p>
 </header>
 
 <div class="container">
-    <div class="section">
-        <h2><i class="fas fa-shield-halved"></i> Об исследовании</h2>
-        <p>Сегодня мошенники используют нейросети для имитации голосов и создания идеальных текстов. В рамках проекта я выяснил: более 40% школьников могут стать жертвами таких атак. Этот ресурс — ваш навигатор в мире кибербезопасности.</p>
-    </div>
-
-    <div class="section emergency-section">
-        <h2><i class="fas fa-life-ring"></i> SOS: Если данные уже украдены</h2>
-        <div class="rule-card emergency-card">
-            <span class="rule-title">1. Финансовая блокировка</span>
-            Если данные карты попали к мошенникам — немедленно заблокируйте её через приложение банка или по номеру 1000. Просите именно <b>перевыпуск</b>, а не просто блокировку.
-        </div>
-        <div class="rule-card emergency-card">
-            <span class="rule-title">2. Режим "Завершить все сеансы"</span>
-            Зайдите в настройки безопасности (Telegram, ВК, Почта) и нажмите «Завершить все другие сеансы». Срочно смените пароль и включите двухфакторную аутентификацию (2FA).
-        </div>
-        <div class="rule-card emergency-card">
-            <span class="rule-title">3. Оповещение близких</span>
-            Мошенники начнут писать вашим контактам от вашего имени. Сделайте пост или обзвоните ключевых людей, чтобы никто не перевел деньги.
-        </div>
-    </div>
-
     <div class="section">
         <h2><i class="fas fa-exclamation-triangle"></i> Современные угрозы</h2>
         <div class="rule-card">
@@ -195,10 +173,26 @@
             <i class="fas fa-info-circle"></i> <b>Важно:</b> Никто из техподдержки никогда не попросит у вас код из SMS.
         </div>
     </div>
+
+    <div class="section emergency-section">
+        <h2><i class="fas fa-life-ring"></i> Что делать, если данные украли?</h2>
+        <div class="rule-card emergency-card">
+            <span class="rule-title">1. Финансовая блокировка</span>
+            Если данные карты попали к мошенникам — немедленно заблокируйте её через приложение банка или по номеру 1000. Просите именно <b>перевыпуск</b>.
+        </div>
+        <div class="rule-card emergency-card">
+            <span class="rule-title">2. Режим "Завершить все сеансы"</span>
+            Зайдите в настройки безопасности (Telegram, ВК, Почта) и нажмите «Завершить все другие сеансы». Срочно смените пароль и включите 2FA.
+        </div>
+        <div class="rule-card emergency-card">
+            <span class="rule-title">3. Оповещение близких</span>
+            Мошенники начнут писать вашим контактам от вашего имени. Сделайте пост или обзвоните ключевых людей, чтобы никто не перевел деньги.
+        </div>
+    </div>
 </div>
 
 <footer>
-    <p>Проект выполнил: Деулин Павел Максимович, 10"Д" класс, МАОУ СОШ №22</p>
+    <p>Проект выполнил: Деулин Павел Максимович, 10 "Д" класс, МАОУ СОШ №22</p>
     <p>Тюмень, 2026 г.</p>
 </footer>
 
